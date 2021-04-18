@@ -1,0 +1,13 @@
+#cloud-config
+package_update: true
+package_upgrade: true
+packages:
+    - wget
+runcmd:
+  - wget https://raw.githubusercontent.com/isildur13/terraform-k8s-hetzner/main/docker-setup-centos.sh
+  - chmod +x docker-setup-centos.sh
+  - ./docker-setup-centos.sh
+
+  - wget https://raw.githubusercontent.com/isildur13/terraform-k8s-hetzner/main/k8s-setup.sh
+  - chmod +x k8s-setup.sh
+  - ./k8s-setup.sh
