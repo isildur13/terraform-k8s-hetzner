@@ -41,4 +41,6 @@ sudo systemctl enable docker
 sudo systemctl restart docker
 
 
-
+wget https://github.com/docker/compose/releases/download/1.27.4/docker-compose-Linux-x86_64
+mv docker-compose-Linux-x86_64 /usr/bin/docker-compose
+chmod +x /usr/bin/docker-compose
